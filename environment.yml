@@ -1,0 +1,13 @@
+name: pybind-demo
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pybind11
+  - cmake
+  - ninja
+  - compilers
+  - pip
+  - scikit-build-core
+  - setuptools

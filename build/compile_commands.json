@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/devinrcohen/PythonProjects/pybind_complex_demo/build",
+  "command": "/home/devinrcohen/.conda/envs/pybind-demo/bin/x86_64-conda-linux-gnu-c++ -Dcomplex_ext_EXPORTS -I/home/devinrcohen/.conda/envs/pybind-demo/lib/python3.11/site-packages/numpy/_core/include -isystem /home/devinrcohen/.conda/envs/pybind-demo/include/python3.11 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/devinrcohen/.conda/envs/pybind-demo/include -std=gnu++17 -fPIC -fvisibility=hidden -O3 -Wall -Wextra -Wpedantic -flto=auto -fno-fat-lto-objects -o CMakeFiles/complex_ext.dir/src/complex_ext.cpp.o -c /home/devinrcohen/PythonProjects/pybind_complex_demo/src/complex_ext.cpp",
+  "file": "/home/devinrcohen/PythonProjects/pybind_complex_demo/src/complex_ext.cpp",
+  "output": "/home/devinrcohen/PythonProjects/pybind_complex_demo/build/CMakeFiles/complex_ext.dir/src/complex_ext.cpp.o"
+}
+]

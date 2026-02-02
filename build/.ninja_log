@@ -1,0 +1,5 @@
+# ninja log v7
+0	1909	1770007022162351203	CMakeFiles/complex_ext.dir/src/complex_ext.cpp.o	715019f0bdba4bc0
+1910	2791	1770007024072324055	complex_ext.cpython-311-x86_64-linux-gnu.so	ad03d91cb3644f5e
+3	2350	1770009247865445651	CMakeFiles/complex_ext.dir/src/complex_ext.cpp.o	715019f0bdba4bc0
+2350	3236	1770009250213417021	complex_ext.cpython-311-x86_64-linux-gnu.so	ad03d91cb3644f5e

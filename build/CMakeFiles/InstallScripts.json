@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/devinrcohen/PythonProjects/pybind_complex_demo/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,14 @@
+[build-system]
+requires = ["scikit-build-core>=0.9", "pybind11>=2.12", "numpy"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "pybind-complex-demo"
+version = "0.1.0"
+description = "pybind11 + numpy complex64 demo"
+requires-python = ">=3.9"
+dependencies = ["numpy"]
+
+[tool.scikit-build]
+cmake.version = ">=3.18"
+wheel.packages = ["python/pybind_complex_demo"]
