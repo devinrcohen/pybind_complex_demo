@@ -1,20 +1,67 @@
-# CMake / CLion
-build*/
-cmake-build-*/
-CMakeFiles/
-CMakeCache.txt
-*.cmake
-compile_commands.json
+###############################################################################
+# Build outputs (CMake / Ninja)
+###############################################################################
+/build*/
+/cmake-build-*/
+/CMakeCache.txt
+/CMakeFiles/
+/cmake_install.cmake
+/compile_commands.json
+/*.ninja
+/*.ninja_deps
+/*.ninja_log
 
+# Built extension modules (if you ever copy them into the package dir)
+*.so
+*.dylib
+*.pyd
+
+###############################################################################
+# JetBrains / CLion
+###############################################################################
+/.idea/
+/**/.idea/
+/*.iml
+# CLion writes these into build dirs sometimes
+clion-*-log.txt
+clion-environment.txt
+
+###############################################################################
 # Python
+###############################################################################
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+*$py.class
+
+# Packaging / editable build artifacts
 *.egg-info/
 dist/
 _skbuild/
+pip-wheel-metadata/
+.wheelhouse/
 
-# OS/editor
+###############################################################################
+# Conda / virtualenv local metadata
+###############################################################################
+.env
+.venv
+venv/
+ENV/
+env/
+
+###############################################################################
+# OS junk
+###############################################################################
 .DS_Store
-.idea/
-.vscode/
+.AppleDouble
+.LSOverride
+Icon?
+Thumbs.db
+
+###############################################################################
+# Logs / temp
+###############################################################################
+*.log
+*.tmp
+*.swp
+*.swo
