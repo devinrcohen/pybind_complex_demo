@@ -1,0 +1,20 @@
+# CMake / CLion
+build*/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+*.cmake
+compile_commands.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+_skbuild/
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
