@@ -2,26 +2,17 @@
 set -e
 set -o pipefail
 
-# Load conda function into this shell
-if [ -f /usr/etc/profile.d/conda.sh ]; then
-  source /usr/etc/profile.d/conda.sh
-elif [ -f /home/devinrcohen/.conda/etc/profile.d/conda.sh ]; then
-  source /home/devinrcohen/.conda/etc/profile.d/conda.sh
-else
-  echo "ERROR: Could not find conda.sh"
-  exit 1
-fi
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate pybind-demo
 
-# Activate env only if needed
-if [ "${CONDA_DEFAULT_ENV:-}" != "pybind-demo" ]; then
-  conda activate pybind-demo
-fi
-
-# Always (re)configure the build dir with Ninja so the build system is consistent
-cmake -S . -B build -G Ninja \
+# Build (optional; pip -e will build as needed, but explicit is fine)
+BUILD_DIR="build-ninja"
+cmake -S . -B "$BUILD_DIR" -G Ninja \
   -DPython3_EXECUTABLE="$CONDA_PREFIX/bin/python" \
   -DPython3_ROOT_DIR="$CONDA_PREFIX"
+cmake --build "$BUILD_DIR" -v
 
-cmake --build build -v
+# Install/update the editable wheel so the extension ends up in site-packages
+pip install -e . --no-build-isolation -q
 
-PYTHONPATH="$PWD/python" python -m pybind_complex_demo.demo
+python -m pybind_complex_demo.demo
